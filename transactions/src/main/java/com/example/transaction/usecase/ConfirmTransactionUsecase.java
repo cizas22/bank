@@ -1,7 +1,7 @@
-package com.example.transaction.Transaction.usecase;
+package com.example.transaction.usecase;
 
-import com.example.transaction.Transaction.dao.TransactionRepository;
-import com.example.transaction.Transaction.dao.TransactionStatus;
+import com.example.transaction.dao.TransactionRepository;
+import com.example.transaction.dao.TransactionStatus;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

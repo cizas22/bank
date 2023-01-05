@@ -26,7 +26,7 @@ public class CompareCurrencyUsecase {
 
     @Data
     @AllArgsConstructor
-    public class Response {
+    public static class Response {
         private boolean isSame;
     }
 }

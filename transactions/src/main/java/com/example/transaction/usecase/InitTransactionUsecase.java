@@ -1,9 +1,8 @@
-package com.example.transaction.Transaction.usecase;
+package com.example.transaction.usecase;
 
-import com.example.transaction.Transaction.dao.Currency;
-import com.example.transaction.Transaction.dao.TransactionRepository;
-import com.example.transaction.Transaction.dao.Transaction;
-import com.example.transaction.Transaction.dao.TransactionStatus;
+import com.example.transaction.dao.TransactionRepository;
+import com.example.transaction.dao.Transaction;
+import com.example.transaction.dao.TransactionStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +22,7 @@ class InitTransactionUsecase {
         var transaction = new Transaction(
                 null,
                 request.getAccountNo(),
-                new Currency(request.getCurrency(), 'n'),
+                request.getCurrency(),
                 request.getAmount(),
                 TransactionStatus.PENDING);
         var transactionSaved = transactionRepository.save(transaction);
@@ -31,7 +30,7 @@ class InitTransactionUsecase {
     }
 
     @Data
-    public class Request {
+    public static class Request {
         private Long accountNo;
         private BigDecimal amount;
         private Long currency;
@@ -39,7 +38,7 @@ class InitTransactionUsecase {
 
     @Data
     @AllArgsConstructor
-    public class Response {
+    public static class Response {
         private Long transactionNo;
     }
 }

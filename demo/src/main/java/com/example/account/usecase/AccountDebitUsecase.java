@@ -1,9 +1,11 @@
 package com.example.account.usecase;
 
 import com.example.account.dao.AccountRepository;
-import com.example.account.Account.dto.*;
-import com.example.account.dto.*;
-import com.example.currency.Account.dto.*;
+import com.example.account.dto.CurrencyCompareRequestDto;
+import com.example.account.dto.CurrencyCompareResponseDto;
+import com.example.account.dto.TransactionConfirmRequestDto;
+import com.example.account.dto.TransactionInitRequestDto;
+import com.example.account.dto.TransactionInitResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -72,7 +74,7 @@ public class AccountDebitUsecase {
 
     @Data
     @AllArgsConstructor
-    public class Response {
+    public static class Response {
         private BigDecimal balance;
     }
 

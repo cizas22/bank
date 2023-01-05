@@ -21,18 +21,6 @@ public class AccountService {
     public List<Account> getAllAccounts() {
         return accountRepository.findAll();
     }
-//
-//    public void closeAccount(Long accountNo) {
-//        var account = accountRepository.findById(accountNo).orElseThrow(() -> new RuntimeException("Not found"));
-//        account.setStatus(AccountStatus.CLOSED);
-//        accountRepository.save(account);
-//    }
-//
-//    public void openAccount(Long accountNo) {
-//        var account = accountRepository.findById(accountNo).orElseThrow(() -> new RuntimeException("Not found"));
-//        account.setStatus(AccountStatus.OPEN);
-//        accountRepository.save(account);
-//    }
 
     public AccountDebitUsecase.Response debit(AccountDebitUsecase.Request req) {
         return accountDebitUsecase.execute(req);

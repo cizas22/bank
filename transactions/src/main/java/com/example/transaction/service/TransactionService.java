@@ -1,10 +1,10 @@
-package com.example.transaction.Transaction.service;
+package com.example.transaction.service;
 
 
-import com.example.transaction.Transaction.dao.Transaction;
-import com.example.transaction.Transaction.dao.TransactionRepository;
-import com.example.transaction.Transaction.usecase.InitTransactionUsecase;
-import com.example.transaction.Transaction.usecase.ConfirmTransactionUsecase;
+import com.example.transaction.dao.Transaction;
+import com.example.transaction.dao.TransactionRepository;
+import com.example.transaction.usecase.InitTransactionUsecase;
+import com.example.transaction.usecase.ConfirmTransactionUsecase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

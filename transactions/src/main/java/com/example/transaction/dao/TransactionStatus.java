@@ -1,4 +1,4 @@
-package com.example.transaction.Transaction.dao;
+package com.example.transaction.dao;
 
 public enum TransactionStatus {
     SUCCESS, PENDING, FAILED
