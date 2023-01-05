@@ -1,0 +1,26 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+
+    <changeSet id="3" author="karles">
+        <createTable tableName="currency">
+            <column name="currency_no" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="symbol" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="4" author="karles">
+        <insert tableName="currency">
+            <column name="currency_no" value="978"/>
+            <column name="symbol" value="$"/>
+        </insert>
+        <insert tableName="currency">
+            <column name="currency_no" value="840"/>
+            <column name="symbol" value="€"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
