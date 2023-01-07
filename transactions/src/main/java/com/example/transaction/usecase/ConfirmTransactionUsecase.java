@@ -18,7 +18,7 @@ public class ConfirmTransactionUsecase {
     }
 
     @Data
-    public class Request {
+    public static class Request {
         private Long transactionNo;
     }
 }

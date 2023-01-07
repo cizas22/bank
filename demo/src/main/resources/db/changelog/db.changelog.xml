@@ -4,7 +4,7 @@
 
     <changeSet id="1" author="karles">
         <createTable tableName="account">
-            <column name="account_no" type="int">
+            <column name="account_no" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="currency" type="varchar(50)">

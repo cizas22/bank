@@ -27,8 +27,8 @@ public class TransactionController {
     }
 
     @PostMapping("/init")
-    public void initTransaction(@RequestBody InitTransactionUsecase.Request req) {
-        transactionService.initTransaction(req);
+    public InitTransactionUsecase.Response initTransaction(@RequestBody InitTransactionUsecase.Request req) {
+        return transactionService.initTransaction(req);
     }
 
     @PutMapping("/confirm")
